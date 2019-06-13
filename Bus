@@ -1,0 +1,24 @@
+import statistics
+import numpy
+
+n = 0
+i = 0
+a = []
+
+stop1 = (5,0)
+stop2 = (4,2)
+stop3 = (8,5)
+stop4 = (2,2)
+
+stops = [stop1, stop2, stop3, stop4]
+l= len(stops)
+a = [None] * l
+
+while i < l:
+    n = n + stops[i][0] - stops[i][1]
+    a[i]= n
+    print(n)
+    i=i+1
+
+
+print('The bus stopped', l, 'times, the max number of passengers was:', max(a) ,'the average occupation was ', statistics.mean(a) ,' and the standard deviation was' ,numpy.std(a))

@@ -1,0 +1,13 @@
+Height = 125
+Daily = 30
+Retreat = 20
+Accumulated = 0
+Days = 0
+
+while Accumulated <= Height:
+    Accumulated = Accumulated + Daily
+    Days = Days + 1
+    if Accumulated <= Height:
+        Accumulated = Accumulated - Retreat
+    else:
+        print('Days: ',Days)
